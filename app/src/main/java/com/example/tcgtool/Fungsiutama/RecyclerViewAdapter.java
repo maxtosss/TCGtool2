@@ -1,27 +1,28 @@
-package com.example.tcgtool;
+package com.example.tcgtool.Fungsiutama;
 
 import android.content.Context;
 import android.content.Intent;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.tcgtool.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import room.CardEntity;
+
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
     Context mContext;
-    List<Card> mData;
+    List<CardEntity> mData;
 
-    public RecyclerViewAdapter(Context mContext, List<Card> mData) {
+    public RecyclerViewAdapter(Context mContext, List<CardEntity> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -41,17 +42,27 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
         //piccaso
-        Picasso.with(mContext).load(mData.get(position).getTumbnail()).into(holder.imageView);
+        String[]image_url=mData.get(position).getImage_url().toArray(new String[0]);
+        Picasso.with(mContext).load(image_url[0]).into(holder.imageView);
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 Intent intent = new Intent(mContext,Card_Detail.class);
+                intent.putExtra("id",mData.get(position).getId());
+                intent.putExtra("name",mData.get(position).getName());
+                intent.putExtra("type",mData.get(position).getType());
+                intent.putExtra("desc",mData.get(position).getDech());
+                intent.putExtra("atk",mData.get(position).getAtk());
+                intent.putExtra("def",mData.get(position).getDef());
+                intent.putExtra("level",mData.get(position).getLevel());
+                intent.putExtra("race",mData.get(position).getRace());
+                intent.putExtra("attribute",mData.get(position).getAttribute());
+                intent.putExtra("thumbnail",mData.get(position).getImage_url());
                 mContext.startActivity(intent);
             }
         });
-
-
-        //set click listener
 
 
     }

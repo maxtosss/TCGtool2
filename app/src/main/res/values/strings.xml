@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">TCGtool</string>
+    <string name="card_name">D/D/D Flame High King Genghis</string>
+    <string name="description">"1 Tuner + 1 or more non-Tuner \"D/D\" monsters\n" + "During either player's turn: You can target 1 face-up Spell/Trap Card on the field; that target has its effects negated, until the next Standby Phase. You can only use this effect of \"D/D/D Cursed King Siegfried\" once per turn. If this card is destroyed by battle or card effect and sent to the Graveyard: Gain 1000 LP for each \"Dark Contract\" card you control.",</string>
+    <string name="type">Type</string>
+    <string name="isitype">fiend</string>
+    <string name="atk">atk</string>
+    <string name="isiatk">2800</string>
+    <string name="def">def</string>
+    <string name="isidef">2400</string>
+    <string name="level">level</string>
+    <string name="isilevel">8</string>
+    <string name="race">Archertype</string>
+    <string name="isirace">D/D</string>
+    <string name="atrribute">Atribbute</string>
+    <string name="isiatributte">Fire</string>
+    <string name="id">16006416</string>
 </resources>

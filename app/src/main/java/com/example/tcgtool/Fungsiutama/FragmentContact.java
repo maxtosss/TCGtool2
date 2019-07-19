@@ -1,4 +1,4 @@
-package com.example.tcgtool;
+package com.example.tcgtool.Fungsiutama;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,18 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentFav extends Fragment {
+import com.example.tcgtool.R;
+
+public class FragmentContact extends Fragment {
 
     View v;
 
-    public FragmentFav() {
+    public FragmentContact() {
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.fav_fragment,container,false);
+        v = inflater.inflate(R.layout.contact_fragment,container,false);
         return v;
     }
 }
-

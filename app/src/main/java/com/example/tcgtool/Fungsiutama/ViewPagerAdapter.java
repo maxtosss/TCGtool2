@@ -1,4 +1,4 @@
-package com.example.tcgtool;
+package com.example.tcgtool.Fungsiutama;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;

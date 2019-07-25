@@ -35,16 +35,18 @@ public class Card_Detail extends AppCompatActivity {
 
         id.setText(intent.getExtras().getString("id"));
         name.setText(intent.getExtras().getString("name"));
-        type.setText(intent.getExtras().getString("type"));
-        desc.setText(intent.getExtras().getString("desc"));
-        atk.setText(intent.getExtras().getString("atk"));
-        def.setText(intent.getExtras().getString("def"));
-        level.setText(intent.getExtras().getString("level"));
-        race.setText(intent.getExtras().getString("race"));
-        attribute.setText(intent.getExtras().getString("attribute"));
+        type.setText(intent.getExtras().getString("faction"));
+        desc.setText(intent.getExtras().getString("text"));
+        atk.setText(intent.getExtras().getString("cost"));
+        def.setText(intent.getExtras().getString("mechanics"));
+        level.setText(intent.getExtras().getString("rarity"));
+        race.setText(intent.getExtras().getString("set"));
+        attribute.setText(intent.getExtras().getString("type"));
 
-        String[]image_url=intent.getExtras().getStringArrayList("thumnail").toArray(new String[0]);
-        Picasso.with(this).load(image_url[0]).into(thumbnail);
+        String idurl = intent.getExtras().getString("id");
+        String url = "https://art.hearthstonejson.com/v1/render/latest/enUS/256x/EX1_001.png";
+        String newurl = url.replace("EX1_001",idurl);
+        Picasso.with(this).load(newurl).into(thumbnail);
 
 
 

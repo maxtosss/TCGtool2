@@ -42,8 +42,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
         //piccaso
-        String[]image_url=mData.get(position).getImage_url().toArray(new String[0]);
-        Picasso.with(mContext).load(image_url[0]).into(holder.imageView);
+
+        String url = "https://art.hearthstonejson.com/v1/render/latest/enUS/256x/EX1_001.png";
+        String idurl = mData.get(position).getId();
+        String newurl = url.replace("EX1_001",idurl);
+        Picasso.with(mContext).load(newurl).into(holder.imageView);
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,15 +54,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                 Intent intent = new Intent(mContext,Card_Detail.class);
                 intent.putExtra("id",mData.get(position).getId());
+                intent.putExtra("dbfid",mData.get(position).getDbfid());
                 intent.putExtra("name",mData.get(position).getName());
+                intent.putExtra("text",mData.get(position).getText());
+                intent.putExtra("flavor",mData.get(position).getFlavor());
+                intent.putExtra("artist",mData.get(position).getArtist());
+                intent.putExtra("attack",mData.get(position).getAttack());
+                intent.putExtra("cardClass",mData.get(position).getCardClass());
+                intent.putExtra("collectible",mData.get(position).getCollectible());
+                intent.putExtra("cost",mData.get(position).getCost());
+                intent.putExtra("elite",mData.get(position).getElite());
+                intent.putExtra("faction",mData.get(position).getFaction());
+                intent.putExtra("health",mData.get(position).getHealth());
+                intent.putStringArrayListExtra("mechanics",mData.get(position).getMechanics());
+                intent.putExtra("rarity",mData.get(position).getRarity());
+                intent.putExtra("set",mData.get(position).getSet());
                 intent.putExtra("type",mData.get(position).getType());
-                intent.putExtra("desc",mData.get(position).getDech());
-                intent.putExtra("atk",mData.get(position).getAtk());
-                intent.putExtra("def",mData.get(position).getDef());
-                intent.putExtra("level",mData.get(position).getLevel());
-                intent.putExtra("race",mData.get(position).getRace());
-                intent.putExtra("attribute",mData.get(position).getAttribute());
-                intent.putExtra("thumbnail",mData.get(position).getImage_url());
+
                 mContext.startActivity(intent);
             }
         });

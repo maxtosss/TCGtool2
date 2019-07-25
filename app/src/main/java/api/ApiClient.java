@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    public static final String BASE_URL = "https://db.ygoprodeck.com/api/v5/";
+    public static final String BASE_URL = "https://api.hearthstonejson.com/v1/25770/enUS/";
     private static Retrofit retrofit = null;
     public static Retrofit getClient() {
         if (retrofit==null) {

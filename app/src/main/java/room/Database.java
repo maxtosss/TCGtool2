@@ -10,7 +10,7 @@ import android.content.Context;
 
 
 
-@android.arch.persistence.room.Database(entities = {CardEntity.class}, version = 2)
+@android.arch.persistence.room.Database(entities = {CardEntity.class}, version = 3)
 @TypeConverters({ArrayTypeConverter.class})
 public abstract class Database extends RoomDatabase
 {

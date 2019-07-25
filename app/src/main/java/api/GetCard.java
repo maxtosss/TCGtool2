@@ -1,79 +1,113 @@
 package api;
 
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class GetCard {
-
     @SerializedName("id")
     String id;
+    @SerializedName("dbfid")
+    String dbfid;
     @SerializedName("name")
     String name;
+    @SerializedName("text")
+    String text;
+    @SerializedName("flavor")
+    String flavor;
+    @SerializedName("artist")
+    String artist;
+    @SerializedName("attack")
+    String attack;
+    @SerializedName("cardClass")
+    String cardClass;
+    @SerializedName("collectible")
+    String collectible;
+    @SerializedName("cost")
+    String cost;
+    @SerializedName("elite")
+    String elite;
+    @SerializedName("faction")
+    String faction;
+    @SerializedName("health")
+    String health;
+    @SerializedName("mechanics")
+    ArrayList<String> mechanics = new ArrayList<>();
+    @SerializedName("rarity")
+    String rarity;
+    @SerializedName("set")
+    String set;
     @SerializedName("type")
     String type;
-    @SerializedName("dech")
-    String dech;
-    @SerializedName("race")
-    String race;
-    @SerializedName("attribute")
-    String attribute;
-    @SerializedName("archetype")
-    String archetype;
-    @SerializedName("atk")
-    String atk;
-    @SerializedName("def")
-    String def;
-    @SerializedName("card_image")
-    ArrayList<String> image_url=new ArrayList<>();
-    @SerializedName("level")
-    String level;
 
     public String getId() {
         return id;
+    }
+
+    public String getDbfid() {
+        return dbfid;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getType() { return type; }
-
-    public String getDech() {
-        return dech;
+    public String getText() {
+        return text;
     }
 
-    public String getRace() {
-        return race;
+    public String getFlavor() {
+        return flavor;
     }
 
-    public String getAttribute() {
-        return attribute;
+    public String getArtist() {
+        return artist;
     }
 
-    public String getArchetype() {
-        return archetype;
+    public String getAttack() {
+        return attack;
     }
 
-    public String getAtk() {
-        return atk;
+    public String getCardClass() {
+        return cardClass;
     }
 
-    public String getDef() {
-        return def;
+    public String getCollectible() {
+        return collectible;
     }
 
-    public ArrayList<String> getImage_url() {
-        return image_url;
+    public String getCost() {
+        return cost;
     }
 
-    public String getLevel() {
-        return level;
+    public String getElite() {
+        return elite;
     }
 
-    public void setLevel(String level) {
-        this.level = level;
+    public String getFaction() {
+        return faction;
+    }
+
+    public String getHealth() {
+        return health;
+    }
+
+    public ArrayList<String> getMechanics() {
+        return mechanics;
+    }
+
+    public String getRarity() {
+        return rarity;
+    }
+
+    public String getSet() {
+        return set;
+    }
+
+    public String getType() {
+        return type;
     }
 }
 

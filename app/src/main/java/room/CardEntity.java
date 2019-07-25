@@ -10,39 +10,57 @@ import java.util.ArrayList;
 
 @android.arch.persistence.room.Entity
 public class CardEntity implements Serializable {
-
     @PrimaryKey
     @NonNull
     @SerializedName("id")
     String id;
+    @SerializedName("dbfid")
+    String dbfid;
     @SerializedName("name")
     String name;
+    @SerializedName("text")
+    String text;
+    @SerializedName("flavor")
+    String flavor;
+    @SerializedName("artist")
+    String artist;
+    @SerializedName("attack")
+    String attack;
+    @SerializedName("cardClass")
+    String cardClass;
+    @SerializedName("collectible")
+    String collectible;
+    @SerializedName("cost")
+    String cost;
+    @SerializedName("elite")
+    String elite;
+    @SerializedName("faction")
+    String faction;
+    @SerializedName("health")
+    String health;
+    @SerializedName("mechanics")
+    ArrayList<String> mechanics = new ArrayList<>();
+    @SerializedName("rarity")
+    String rarity;
+    @SerializedName("set")
+    String set;
     @SerializedName("type")
     String type;
-    @SerializedName("dech")
-    String dech;
-    @SerializedName("race")
-    String race;
-    @SerializedName("attribute")
-    String attribute;
-    @SerializedName("archetype")
-    String archetype;
-    @SerializedName("atk")
-    String atk;
-    @SerializedName("def")
-    String def;
-    @SerializedName("card_image")
-    ArrayList<String> image_url=new ArrayList<>();
-    @SerializedName("level")
-    String level;
 
-    @NonNull
     public String getId() {
         return id;
     }
 
-    public void setId(@NonNull String id) {
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public String getDbfid() {
+        return dbfid;
+    }
+
+    public void setDbfid(String dbfid) {
+        this.dbfid = dbfid;
     }
 
     public String getName() {
@@ -53,75 +71,115 @@ public class CardEntity implements Serializable {
         this.name = name;
     }
 
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getFlavor() {
+        return flavor;
+    }
+
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    public String getAttack() {
+        return attack;
+    }
+
+    public void setAttack(String attack) {
+        this.attack = attack;
+    }
+
+    public String getCardClass() {
+        return cardClass;
+    }
+
+    public void setCardClass(String cardClass) {
+        this.cardClass = cardClass;
+    }
+
+    public String getCollectible() {
+        return collectible;
+    }
+
+    public void setCollectible(String collectible) {
+        this.collectible = collectible;
+    }
+
+    public String getCost() {
+        return cost;
+    }
+
+    public void setCost(String cost) {
+        this.cost = cost;
+    }
+
+    public String getElite() {
+        return elite;
+    }
+
+    public void setElite(String elite) {
+        this.elite = elite;
+    }
+
+    public String getFaction() {
+        return faction;
+    }
+
+    public void setFaction(String faction) {
+        this.faction = faction;
+    }
+
+    public String getHealth() {
+        return health;
+    }
+
+    public void setHealth(String health) {
+        this.health = health;
+    }
+
+    public ArrayList<String> getMechanics() {
+        return mechanics;
+    }
+
+    public void setMechanics(ArrayList<String> mechanics) {
+        this.mechanics = mechanics;
+    }
+
+    public String getRarity() {
+        return rarity;
+    }
+
+    public void setRarity(String rarity) {
+        this.rarity = rarity;
+    }
+
+    public String getSet() {
+        return set;
+    }
+
+    public void setSet(String set) {
+        this.set = set;
+    }
+
     public String getType() {
         return type;
     }
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public String getDech() {
-        return dech;
-    }
-
-    public void setDech(String dech) {
-        this.dech = dech;
-    }
-
-    public String getRace() {
-        return race;
-    }
-
-    public void setRace(String race) {
-        this.race = race;
-    }
-
-    public String getAttribute() {
-        return attribute;
-    }
-
-    public void setAttribute(String attribute) {
-        this.attribute = attribute;
-    }
-
-    public String getArchetype() {
-        return archetype;
-    }
-
-    public void setArchetype(String archetype) {
-        this.archetype = archetype;
-    }
-
-    public String getAtk() {
-        return atk;
-    }
-
-    public void setAtk(String atk) {
-        this.atk = atk;
-    }
-
-    public String getDef() {
-        return def;
-    }
-
-    public void setDef(String def) {
-        this.def = def;
-    }
-
-    public ArrayList<String> getImage_url() {
-        return image_url;
-    }
-
-    public void setImage_url(ArrayList<String> image_url) {
-        this.image_url = image_url;
-    }
-
-    public String getLevel() {
-        return level;
-    }
-
-    public void setLevel(String level) {
-        this.level = level;
     }
 }

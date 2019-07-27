@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.example.tcgtool.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import api.ApiClient;
@@ -28,7 +27,7 @@ import retrofit2.Response;
 import room.CardEntity;
 import room.Database;
 
-public class FragmentCall extends Fragment {
+public class FragmentCard extends Fragment {
 
     View v;
     private RecyclerView myrecylerview;
@@ -37,13 +36,13 @@ public class FragmentCall extends Fragment {
     private ProgressDialog progressDoalog;
 
 
-    public FragmentCall() {
+    public FragmentCard() {
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.call_fragment, container, false);
+        v = inflater.inflate(R.layout.card_fragment, container, false);
         myrecylerview = (RecyclerView) v.findViewById(R.id.contact_recyclerview);
 
         myrecylerview.setLayoutManager(new GridLayoutManager(getActivity(), 2));

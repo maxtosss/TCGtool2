@@ -20,8 +20,7 @@ public class FragmentFav extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.fav_fragment,container,false);
+        v = inflater.inflate(R.layout.search_fragment,container,false);
         return v;
     }
 }
-

@@ -19,6 +19,7 @@ import room.CardEntity;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
+
     Context mContext;
     List<CardEntity> mData;
 

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         //add fragment item
-        adapter.AddFragment(new FragmentCard(),"New Card List");
+        adapter.AddFragment(new FragmentCard(),"List Card");
         adapter.AddFragment(new FragmentFav(),"Search");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

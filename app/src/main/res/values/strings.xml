@@ -15,4 +15,20 @@
     <string name="atrribute">Atribbute</string>
     <string name="isiatributte">Fire</string>
     <string name="id">16006416</string>
+    <string name="rarity">Rarity</string>
+    <string name="attack">Attack</string>
+    <string name="healt">Healt</string>
+    <string name="cost">Cost</string>
+    <string name="cardclass">Class</string>
+    <string name="minion">MINION</string>
+    <string name="atk2">6</string>
+    <string name="legendary">LEGENDARY</string>
+    <string name="neutral">Neutral</string>
+    <string name="_5">5</string>
+    <string name="expert1">expert1</string>
+    <string name="set">Set</string>
+    <string name="battlecry">battlecry</string>
+    <string name="mechanics">Mechanics</string>
+    <string name="_2">2</string>
+    <string name="artist">Artist</string>
 </resources>

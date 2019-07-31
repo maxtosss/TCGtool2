@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fungsiutama.Card_Detail">
+    tools:context=".Fungsiutama.Card_Detail"
+    android:background="@drawable/bbb1">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -23,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="5dp">
+                android:padding="10dp">
 
 
                 <TextView
@@ -62,9 +63,20 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
-                android:text="@string/description"
+                android:text="Charge. Battlecry: Summon two 1/1 Whelps for your opponent."
                 android:textAlignment="center"
                 android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/flavor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="At least he has Angry Chicken."
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -88,7 +100,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:padding="5dp"
-                        android:text="@string/isitype"/>
+                        android:text="@string/minion"/>
                 </TableRow>
 
                 <TableRow
@@ -99,16 +111,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/race" />
+                        android:text="@string/rarity" />
 
                     <TextView
                         android:textAlignment="center"
-                        android:id="@+id/idrace"
+                        android:id="@+id/rarity"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:padding="5dp"
-                        android:text="@string/isirace"/>
+                        android:text= "@string/legendary"/>
                 </TableRow>
 
                 <TableRow
@@ -119,16 +131,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/atk" />
+                        android:text="@string/set" />
 
                     <TextView
                         android:textAlignment="center"
-                        android:id="@+id/atk"
+                        android:id="@+id/set"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:padding="5dp"
-                        android:text="@string/isiatk"/>
+                        android:text="@string/expert1"/>
                 </TableRow>
 
                 <TableRow
@@ -136,39 +148,18 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/tvSpechr"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/def" />
+                        android:text="@string/artist" />
 
                     <TextView
-                        android:textAlignment="center"
-                        android:id="@+id/def"
+                        android:id="@+id/artist"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:padding="5dp"
-                        android:text="@string/isidef"/>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/tvGenderhr"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="@string/level" />
-
-                    <TextView
-                        android:id="@+id/level"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/isilevel"
+                        android:text="@string/_2"
                         android:textAlignment="center" />
                 </TableRow>
 
@@ -180,14 +171,33 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/atrribute" />
+                        android:text="@string/mechanics" />
 
                     <TextView
-                        android:id="@+id/atribbute"
+                        android:id="@+id/mechanics"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="@string/isiatributte"
+                        android:text="@string/battlecry"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/cardclass" />
+
+                    <TextView
+                        android:id="@+id/cardclass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/neutral"
                         android:textAlignment="center" />
                 </TableRow>
 

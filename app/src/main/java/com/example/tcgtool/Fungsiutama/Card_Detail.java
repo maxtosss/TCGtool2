@@ -11,7 +11,6 @@ import com.example.tcgtool.R;
 import com.squareup.picasso.Picasso;
 
 public class Card_Detail extends AppCompatActivity {
-    private String name,type,desc,atk,def,level,race,attribute,tumbnail,idcard;
 
 
     @Override
@@ -22,26 +21,30 @@ public class Card_Detail extends AppCompatActivity {
 
         TextView id = findViewById(R.id.idcard);
         TextView name = findViewById(R.id.Cardname);
-        TextView type = findViewById(R.id.type);
-        TextView desc = findViewById(R.id.description);
-        TextView atk = findViewById(R.id.atk);
-        TextView def = findViewById(R.id.def);
-        TextView level = findViewById(R.id.level);
-        TextView race = findViewById(R.id.idrace);
-        TextView attribute= findViewById(R.id.atribbute);
         ImageView thumbnail= findViewById(R.id.imgCard);
+        TextView desc = findViewById(R.id.description);
+        TextView flavor = findViewById(R.id.flavor);
+        TextView type = findViewById(R.id.type);
+        TextView rarity = findViewById(R.id.rarity);
+        TextView set = findViewById(R.id.set);
+        TextView artist = findViewById(R.id.artist);
+        TextView mechanics = findViewById(R.id.mechanics);
+        TextView cardclass = findViewById(R.id.cardclass);
+
+
 
         Intent intent = getIntent();
 
         id.setText(intent.getExtras().getString("id"));
         name.setText(intent.getExtras().getString("name"));
         type.setText(intent.getExtras().getString("faction"));
+        flavor.setText(intent.getExtras().getString("flavor"));
         desc.setText(intent.getExtras().getString("text"));
-        atk.setText(intent.getExtras().getString("cost"));
-        def.setText(intent.getExtras().getString("mechanics"));
-        level.setText(intent.getExtras().getString("rarity"));
-        race.setText(intent.getExtras().getString("set"));
-        attribute.setText(intent.getExtras().getString("type"));
+        rarity.setText(intent.getExtras().getString("rarity"));
+        set.setText(intent.getExtras().getString("set"));
+        artist.setText(intent.getExtras().getString("artist"));
+        mechanics.setText(intent.getExtras().getString("mechanics"));
+        cardclass.setText(intent.getExtras().getString("cardclass"));
 
         String idurl = intent.getExtras().getString("id");
         String url = "https://art.hearthstonejson.com/v1/render/latest/enUS/256x/EX1_001.png";

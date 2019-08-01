@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_portrait_black_24dp);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_library_books_black_24dp);
 
         //remove shadow from action bars
         ActionBar actionBar = getSupportActionBar();

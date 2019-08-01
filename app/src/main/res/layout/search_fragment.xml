@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bbb1">
 
 
 
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:padding="100dp"
-        android:text="In Progress"
-        android:textAlignment="center"
-        android:textSize="40sp" />
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:layout_marginTop="100dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@color/cardview_light_background"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Search"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"/>
+</RelativeLayout>
